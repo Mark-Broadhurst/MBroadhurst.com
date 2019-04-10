@@ -8,16 +8,17 @@ import { ExperiencesComponent } from './experiences/experiences.component';
 import { ExperienceComponent } from './experience/experience.component';
 
 const routes: Routes = [
-  { path: '', component: HomeComponent},
   { path: 'skills', component: SkillsComponent},
   { path: 'skills/:skill', component: SkillComponent},
   { path: 'experience', component: ExperiencesComponent},
   { path: 'experience/:experience', component: ExperienceComponent},
+  { path: '', component: HomeComponent, pathMatch: 'full'},
   { path: '**' , component: PageNotFoundComponent }
 ];
 
 @NgModule({
   imports: [RouterModule.forRoot(routes)],
-  exports: [RouterModule]
+  exports: [RouterModule],
+  providers: []
 })
 export class AppRoutingModule { }

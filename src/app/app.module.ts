@@ -13,7 +13,10 @@ import { SkillComponent } from './skill/skill.component';
 import { ExperiencesComponent } from './experiences/experiences.component';
 import { ExperienceComponent } from './experience/experience.component';
 import { ProfileComponent } from './profile/profile.component';
-import {MatToolbarModule} from '@angular/material/toolbar';
+import { MatToolbarModule } from '@angular/material/toolbar';
+import { HttpClientModule } from '@angular/common/http';
+
+import { LoggerService } from './logger.service';
 
 @NgModule({
   declarations: [
@@ -36,9 +39,10 @@ import {MatToolbarModule} from '@angular/material/toolbar';
     MatMenuModule,
     MatIconModule,
     MatButtonModule,
-    LayoutModule
+    LayoutModule,
+    HttpClientModule
   ],
-  providers: [],
+  providers: [LoggerService],
   bootstrap: [AppComponent]
 })
 export class AppModule { }
