@@ -13,7 +13,7 @@ before_script:
 
 script:
 - ng lint
-- ng build --prod --base-href https://Mark-Broadhurst/MBroadhurst.com
+- ng build --prod --base-href https://mark-broadhurst.github.io/MBroadhurst.com/
 
 deploy:
   provider: pages
